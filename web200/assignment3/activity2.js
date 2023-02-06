@@ -50,19 +50,17 @@ function getSeconds(numOfYears, seconds) {
     return numOfSeconds;
 }
 
-function displayResults(numOfMiles, numOfYards, numOfFeet, numberOfInches, numOfKilometers, numOfMeters, numOfCentimeters) {
+function displayResults(numOfYears, numOfMonths, numOfDays, numOfHours, numOfMinutes, numOfSecondss) {
     numOfYards = numOfYards.toFixed(1);
     numOfFeet = numOfFeet.toFixed(1);
     numOfInches = numOfInches.toFixed(1);
     numOfKilometers = numOfKilometers.toFixed(1);
     numOfMeters = numOfMeters.toFixed(1);
     numOfCentimeters = numOfCentimeters.toFixed(1);
-    document.getElementById("numOfMiles").innerText = numOfMiles;
-    document.getElementById("numOfYards").innerText = numOfYards;
-    document.getElementById("numOfFeet").innerText = numOfFeet;
-    document.getElementById("numOfFeet").innerText = numOfFeet;
-    document.getElementById("numOfInches").innerText = numOfInches;
-    document.getElementById("numOfKilometers").innerText = numOfKilometers;
-    document.getElementById("numOfMeters").innerText = numOfMeters;
-    document.getElementById("numOfCentimeters").innerText = numOfCentimeters;
+    document.getElementById("numOfYears").innerText = numOfYears;
+    document.getElementById("numOfMonths").innerText = numOfMonths;
+    document.getElementById("numOfDays").innerText = numOfDays;
+    document.getElementById("numOfHours").innerText = numOfHours;
+    document.getElementById("numOfMinutes").innerText = numOfMinutes;
+    document.getElementById("numOfSeconds").innerText = numOfSeconds;
 }
