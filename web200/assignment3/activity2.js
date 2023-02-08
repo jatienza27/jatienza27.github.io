@@ -8,12 +8,12 @@ const seconds = 31536000;
 main();
 
 function main() {
-    let numOfYears = getYears;
-    let numOfMonths = getMonths;
-    let numOfDays = getDays;
-    let numOfHours = getHours;
-    let numOfMinutes = getMinutes;
-    let numOfSeconds = getSeconds
+    let numOfYears = getYears();
+    let numOfMonths = getMonths(numOfYears, months);
+    let numOfDays = getDays(numOfYears, days);
+    let numOfHours = getHours(numOfYears, hours);
+    let numOfMinutes = getMinutes(numOfYears, minutes);
+    let numOfSeconds = getSeconds(numOfYears, seconds);
     displayResults(numOfYears, numOfMonths, numOfDays, numOfHours, numOfMinutes, numOfSeconds)
 }
 
@@ -50,13 +50,13 @@ function getSeconds(numOfYears, seconds) {
     return numOfSeconds;
 }
 
-function displayResults(numOfYears, numOfMonths, numOfDays, numOfHours, numOfMinutes, numOfSecondss) {
-    numOfYards = numOfYards.toFixed(1);
-    numOfFeet = numOfFeet.toFixed(1);
-    numOfInches = numOfInches.toFixed(1);
-    numOfKilometers = numOfKilometers.toFixed(1);
-    numOfMeters = numOfMeters.toFixed(1);
-    numOfCentimeters = numOfCentimeters.toFixed(1);
+function displayResults(numOfYears, numOfMonths, numOfDays, numOfHours, numOfMinutes, numOfSeconds) {
+    numOfYears = numOfYears.toFixed(1);
+    numOfMonths = numOfMonths.toFixed(1);
+    numOfDays = numOfDays.toFixed(1);
+    numOfHours = numOfHours.toFixed(1);
+    numOfMinutes = numOfMinutes.toFixed(1);
+    numOfSeconds = numOfSeconds.toFixed(1);
     document.getElementById("numOfYears").innerText = numOfYears;
     document.getElementById("numOfMonths").innerText = numOfMonths;
     document.getElementById("numOfDays").innerText = numOfDays;

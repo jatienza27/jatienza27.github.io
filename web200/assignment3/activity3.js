@@ -12,13 +12,13 @@ const centimeter = 100;
 main();
 
 function main() {
-    let numOfMiles = getMiles;
-    let numOfYards = getYards;
-    let numOfFeet = getFeet;
-    let numOfInches = getInches;
-    let numOfKilometers = getKilometers;
-    let numOfMeters = getMeters;
-    let numOfCentimeters = getCentimeters;
+    let numOfMiles = getMiles();
+    let numOfYards = getYards(numOfMiles, mile);
+    let numOfFeet = getFeet(numOfMiles, feet);
+    let numOfInches = getInches(numOfMiles, inch);
+    let numOfKilometers = getKilometers(numOfMiles, kilometer);
+    let numOfMeters = getMeters(numOfMiles,kilometer, meter);
+    let numOfCentimeters = getCentimeters(numOfMiles, kilometer, meter, centimeter);
     displayResults(numOfMiles, numOfYards, numOfFeet, numOfInches, numOfKilometers, numOfMeters, numOfCentimeters)
 }
 
@@ -60,7 +60,7 @@ function getCentimeters (numOfMiles, kilometer, meter, centimeter) {
     return numOfCentimeters;
 }
 
-function displayResults(numOfMiles, numOfYards, numOfFeet, numberOfInches, numOfKilometers, numOfMeters, numOfCentimeters) {
+function displayResults(numOfMiles, numOfYards, numOfFeet, numOfInches, numOfKilometers, numOfMeters, numOfCentimeters) {
     numOfYards = numOfYards.toFixed(1);
     numOfFeet = numOfFeet.toFixed(1);
     numOfInches = numOfInches.toFixed(1);
@@ -69,7 +69,6 @@ function displayResults(numOfMiles, numOfYards, numOfFeet, numberOfInches, numOf
     numOfCentimeters = numOfCentimeters.toFixed(1);
     document.getElementById("numOfMiles").innerText = numOfMiles;
     document.getElementById("numOfYards").innerText = numOfYards;
-    document.getElementById("numOfFeet").innerText = numOfFeet;
     document.getElementById("numOfFeet").innerText = numOfFeet;
     document.getElementById("numOfInches").innerText = numOfInches;
     document.getElementById("numOfKilometers").innerText = numOfKilometers;
