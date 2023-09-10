@@ -3,6 +3,18 @@ body {
     font-family: cursive;
     background-color: #231942;
 }
-header {
+h1 {
+    color: #ffffff;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+li {
     color: #ffffff;
 }
