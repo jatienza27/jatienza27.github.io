@@ -1,20 +1,114 @@
 
-body {
-    font-family: cursive;
-    background-color: #231942;
-}
-h1 {
-    color: #ffffff;
-}
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        height: 100%;
+        margin: 0;
+      }
 
-h2 {
-    color: #ffffff;
-}
+    body {
+        font-family: fantasy;
+        background-image: url("sea-540123_1280.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-h3 {
-    color: #ffffff;
-}
+    #wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        border: thin solid #31291d;
+        
+    }
 
-li {
-    color: #ffffff;
-}
+    header {
+        background-color: #9d7484;
+        color: #31291d;
+        text-align: left;
+        padding: 20px;
+        border: thin solid #31291d;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    nav{
+        border: thin solid #31291d;
+        display: flex;
+        background-color: #72828d;
+    }
+
+    nav a {
+        color: #31291d;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    nav a:hover {
+        background-color: #738aa5;
+        color: #6b523f;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .side {
+        flex: 30%;
+        background-color: #aab7b1;
+        padding: 20px;
+        border: thin solid #31291d;
+        color: #31291d;
+    }
+
+    .main {
+        flex: 70%;
+        color: #231942;
+        background-color: #f5e8e3;
+        padding: 20px;
+        border: thin solid #31291d;
+    }
+
+    #main {
+        background-color: #afa8b2;
+        border: thin solid #31291d;
+        font-size: 2em;
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer {
+        color: #31291d;
+        background-color: #e99d96;
+        border: thin solid #31291d;
+        text-align: center;
+    }
+
+    footer a {
+        color: #31291d;
+    }
+
+    footer a:hover {
+        color: #6b523f;
+    } 
+
+   @media screen and (max-width: 700px) {
+        #wrapper{
+            width: 100%;
+        }
+
+        .row {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-direction: column;
+        }
+   }
