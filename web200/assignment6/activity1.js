@@ -6,8 +6,6 @@ let avgScore = score / numOfScores;
 do {
     score = prompt("Please enter you score:");
     i++;
-}
-
-while ( i < numOfScores);
+}while ( i < numOfScores);
 
 document.getElementById ("dowhileloops").innerHTML = "Your average score is: " + avgScore;
