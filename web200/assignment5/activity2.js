@@ -51,27 +51,27 @@ function getSeconds(numOfYears, seconds) {
 
 function displayResults(numOfYears, numOfMonths, numOfDays, numOfHours, numOfMinutes, numOfSeconds) {
     let results = prompt ("Would you like to know how old you are in Months, Days, Hours, Minutes, or Seconds");
-    if (results = "Months") {
+    if (results == "Months") {
         numOfYears = numOfYears.toFixed(1);
         numOfMonths = numOfMonths.toFixed(1);
         document.getElementById("numOfYears").innerText = numOfYears;
         document.getElementById("numOfMonths").innerText = numOfMonths;
-    } else if (results = "Days") {
+    } else if (results == "Days") {
         numOfYears = numOfYears.toFixed(1);
         numOfDays = numOfDays.toFixed(1);
         document.getElementById("numOfYears").innerText = numOfYears;
         document.getElementById("numOfDays").innerText = numOfDays;
-    } else if (results = "Hours") {
+    } else if (results == "Hours") {
         numOfYears = numOfYears.toFixed(1);
         numOfHours = numOfHours.toFixed(1);
         document.getElementById("numOfYears").innerText = numOfYears;
         document.getElementById("numOfHours").innerText = numOfHours;
-    } else if (results = "Minutes") {
+    } else if (results == "Minutes") {
         numOfYears = numOfYears.toFixed(1);
         numOfMinutes = numOfMinutes.toFixed(1);
         document.getElementById("numOfYears").innerText = numOfYears;
         document.getElementById("numOfMinutes").innerText = numOfMinutes;
-    } else if (results = "Seconds") {
+    } else if (results == "Seconds") {
     numOfYears = numOfYears.toFixed(1);
     numOfSeconds = numOfSeconds.toFixed(1);
     document.getElementById("numOfYears").innerText = numOfYears;

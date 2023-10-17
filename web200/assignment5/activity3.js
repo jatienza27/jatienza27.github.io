@@ -60,7 +60,7 @@ function getCentimeters (numOfMiles, kilometer, meter, centimeter) {
 
 function displayResults(numOfMiles, numOfYards, numOfFeet, numOfInches, numOfKilometers, numOfMeters, numOfCentimeters) {
     let results = prompt ("Would you like the results of your measurements be in US or Metric?");
-    if (results = "US") {
+    if (results == "US") {
         numOfYards = numOfYards.toFixed(1);
         numOfFeet = numOfFeet.toFixed(1);
         numOfInches = numOfInches.toFixed(1);
