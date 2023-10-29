@@ -1,114 +1,100 @@
+html {
+    scroll-behavior: smooth;
+}
 
-    * {
-        box-sizing: border-box;
-    }
-    
-    html {
-        height: 100%;
-        margin: 0;
-      }
+#wrapper {
+    text-align: center;
+    color: #fff;
+    font-family: "Oleo Script", sans-serif;
+    font-weight: 100px;
+    font-size: 2.2em;
+    text-shadow: 4px 4px 8px #000;
+}
 
-    body {
-        font-family: fantasy;
-        background-image: url("sea-540123_1280.jpg");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+#wrapper p {
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100px;
+    font-size: 0.75em;
+    text-shadow: 4px 4px 8px #000;
+}
 
-    #wrapper {
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        border: thin solid #31291d;
-        
-    }
+body{
+  background: url(https://pcbx.us/bexy.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
 
-    header {
-        background-color: #9d7484;
-        color: #31291d;
-        text-align: left;
-        padding: 20px;
-        border: thin solid #31291d;
-    }
+.frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
 
-    h1 {
-        font-size: 36px;
-    }
+button {
+    padding: 16px 32px;
+    text-shadow: 4px 4px 8px #000;
+}
 
-    nav{
-        border: thin solid #31291d;
-        display: flex;
-        background-color: #72828d;
-    }
+.custom-btn {
+    width: 300px;
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
 
-    nav a {
-        color: #31291d;
-        padding: 14px 20px;
-        text-decoration: none;
-        text-align: center;
-    }
+.btn {
+    background: #662549;
+    border: none;
+    z-index: 1;
+}
 
-    nav a:hover {
-        background-color: #738aa5;
-        color: #6b523f;
-    }
+.btn:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #F39F5A;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+}
 
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
+.btn:hover {
+    color: #fff;
+    text-shadow: 4px 4px 8px #000;
+}
 
-    .side {
-        flex: 30%;
-        background-color: #aab7b1;
-        padding: 20px;
-        border: thin solid #31291d;
-        color: #31291d;
-    }
+.btn:hover:after {
+    left: 0;
+    width: 100%;
+}
 
-    .main {
-        flex: 70%;
-        color: #231942;
-        background-color: #f5e8e3;
-        padding: 20px;
-        border: thin solid #31291d;
-    }
+.btn:active {
+    top: 2px;
+}
 
-    #main {
-        background-color: #afa8b2;
-        border: thin solid #31291d;
-        font-size: 2em;
-        text-align: center;
-        padding: 20px;
-    }
-
-    footer {
-        color: #31291d;
-        background-color: #e99d96;
-        border: thin solid #31291d;
-        text-align: center;
-    }
-
-    footer a {
-        color: #31291d;
-    }
-
-    footer a:hover {
-        color: #6b523f;
-    } 
-
-   @media screen and (max-width: 700px) {
-        #wrapper{
-            width: 100%;
-        }
-
-        .row {
-            flex-direction: column;
-        }
-
-        nav {
-            flex-direction: column;
-        }
-   }
+footer {
+    text-align: center;
+    color: #fff;
+    text-shadow: 4px 4px 8px #000;
+    font-family:"Montserrat", sans-serif;
+}
