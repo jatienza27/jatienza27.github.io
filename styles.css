@@ -2,6 +2,13 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 4px 4px 8px #000;
+}
+
+
 #wrapper {
     text-align: center;
     color: #fff;
