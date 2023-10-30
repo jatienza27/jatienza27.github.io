@@ -1,12 +1,9 @@
-let numOfScores = prompt("How many scores would you like to enter?");
-let i = 0;
-let score = 0;
+const numOfScores = prompt("How many scores would you like to enter?");
+const score = [0];
 
-while (i < numOfScores) {
+for (let i = 0; i < numOfScores; i++) {
    score = prompt("Please enter you score:");
-   i++;
+   const avgScore = score / numOfScores;
+   document.getElementById ("arrays").innerHTML = "Your average score is: " + avgScore;
 }
 
-let avgScore = score / numOfScores;
-
-document.getElementById ("arrays").innerHTML = "Your average score is: " + avgScore;
