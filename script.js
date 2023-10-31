@@ -43,7 +43,7 @@ function myFunction11() {
 }
 
 function myFunction12() {
-    location.href = "web200/assignment8/activity1.html";
+    location.href = "web200/assignment8/activity3.html";
 }
 
 function myFunction13() {
