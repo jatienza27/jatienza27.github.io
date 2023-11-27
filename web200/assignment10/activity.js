@@ -21,6 +21,8 @@ function create() {
         publisher: publisher,
     };
     
+    bibliography.push(book);
+    
 }
 
 function createAPAFormat(bibliography) {
