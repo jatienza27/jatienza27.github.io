@@ -22,7 +22,7 @@ function create() {
     };
     
     bibliography.push(book);
-    
+   
 }
 
 function createAPAFormat(bibliography) {
