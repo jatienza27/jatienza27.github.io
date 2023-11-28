@@ -1,6 +1,6 @@
 function validateForm() {
-    var form = document.getElementById('infoInput');
-    var valid = form.checkValidity();
+    let form = document.getElementById('infoInput');
+    let valid = form.checkValidity();
 
     if (valid) {
         alert('Form submitted successfully!');
@@ -10,6 +10,6 @@ function validateForm() {
 }
 
 document.getElementById('infoInput').addEventListener('input', function () {
-    var valid = this.checkValidity();
+    let valid = this.checkValidity();
     document.getElementById('submit').disabled = !valid;
 });

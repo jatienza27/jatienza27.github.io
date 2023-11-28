@@ -1,17 +1,19 @@
 var bibliography = [];
 
 function create() {
-    var author = document.getElementById('lastName').value;
-    var author = document.getElementById('firstName').value;
-    var author = document.getElementById('middleName').value;
-    var year = document.getElementById('year').value;
-    var title = document.getElementById('title').value;
-    var city = document.getElementById('city').value;
-    var state = document.getElementById('state').value;
-    var publisher = document.getElementById('publisher').value;
+    let authorLN = document.getElementById('lastName').value;
+    let authorFN = document.getElementById('firstName').value;
+    let authorMN = document.getElementById('middleName').value;
+    let year = document.getElementById('year').value;
+    let title = document.getElementById('title').value;
+    let city = document.getElementById('city').value;
+    let state = document.getElementById('state').value;
+    let publisher = document.getElementById('publisher').value;
 
-    var book = {
-        author: lastName, firstName, middleName,
+    let book = {
+        authorLN: lastName,
+        authorFN: firstName,
+        authorMN: middleName,
         year: year,
         title: title,
         location: {
@@ -26,10 +28,10 @@ function create() {
 }
 
 function createAPAFormat(bibliography) {
-    var apaFormat = '';
+    let apaFormat = '';
 
     bibliography.forEach(function (book) {
-        apaFormat += `<p>${book.author} (${book.year}). ${book.title}. ${book.location.city}, ${book.location.state}: ${book.publisher}.</p>`;
+        apaFormat += `<p>${book.authorLN}, ${book.authorFN} ${book.authorMN} (${book.year}). ${book.title}. ${book.location.city}, ${book.location.state}: ${book.publisher}.</p>`;
     });
 
     return apaFormat;
