@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Savory Slice Pizzeria">
+    <title>Savory Slice Pizzeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Montserrat:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="brand">
+            <a href="#home" class="logo"><img src="2tb.png"/></a>
+            <a href="#home" class="logo-name"><img src="3tb.png"/></a>
+        </div>
+        <div class="topnav">
+            <a href="#home">Home</a>
+            <a href="#packages">Order</a>
+            <a href="#contact-us">Contact Us</a>
+        </div>
+    </header>
+    <div class="main">
+        <section id="home">
+            <div class="content">
+                <h1>Where Every Bite Is A Delight</h1>
+            </div>
+            <div class="icon-divider"><i class="fa-solid fa-pizza-slice" title="scroll down"></i></div>
+        </section>
+        <section class="story">
+            <div class="content">
+                <h1>Ciao!</h1>
+                <p>Welcome to Savory Slice Pizzeria, where every bite is a journey through the perfect blend of flavors!
+                </p>
+                <p>
+                    At Savory Slice, we craft each pizza with passion, using only the freshest ingredients to deliver a
+                    slice
+                    of perfection to your table. Explore our menu, savor our signature creations, and embark on a
+                    culinary
+                    adventure that promises to satisfy your pizza cravings.
+                </p>
+                <p>Thank you for choosing Savory Slice Pizzeria &ndash; where great taste meets great times!</p>
+                <video class="story-video" width="400" height="300" controls autoplay muted>
+                    <source class="video" src="pizzavid.mp4">
+                </video>
+            </div>
+        </section>
+
+        <section id="packages">
+            <div class="content">
+                <h1>Order</h1>
+                <div class="section-h1">
+                    <p>
+                        Indulge in a hassle-free ordering experience at Savory Slice Pizzeria! Our user-friendly order
+                        section is designed with you in mind.
+                        Select from a tempting array of pizza sizes, customize with your favorite toppings, and watch
+                        your order come to life. With just a few clicks,
+                        you can create a personalized masterpiece that will be delivered straight to your doorstep. At
+                        Savory Slice, ordering is as delightful as the pizzas themselves.
+                        Let the cravings commence!
+                    </p>
+                </div>
+                <div class="packages-cards">
+                    <div class="card">
+                        <img src="pepperonipizza.png" alt="Pepperoni Pizza" />
+                        <div class="card-desc">
+                            <h4>Contact Info</h4>
+                            Please enter your contact information below:
+                        </div>
+                        <div class="services">
+                            <div class="services">
+                                <div>
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" required>
+                                </div>
+
+                                <div>
+                                    <label for="address">Address:</label>
+                                    <textarea id="address" required></textarea>
+                                </div>
+
+                                <div>
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" id="phone" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="cheesepizza.png" alt="Cheese Pizza" />
+                        <div class="card-desc">
+                            <h4>Pizza Details</h4>
+                            Please choose your pizza size and toppings.
+                        </div>
+                        <div class="services">
+                            <label for="pizzaSize">Pizza Size:</label>
+                            <select id="pizzaSize">
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+
+                            <h3>Toppings:</h3>
+                            <input type="checkbox" id="pepperoni" class="topping" value="Pepperoni">
+                            <label for="pepperoni">Pepperoni</label>
+                            <div>
+                                <button onclick="addPizza()">Add Pizza</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="supremepizza.png" alt="Supreme Pizza" />
+                        <div class="card-desc">
+                            <h4>Order Summary</h4>
+                            Please review your pizza order.
+                        </div>
+                        <div class="services">
+                            <div id="orderSummary">
+                                <ul id="orderList"></ul>
+                                <p>Total: $<span id="totalPrice">0.00</span></p>
+                            </div>
+                        
+                            <div>
+                                <label for="comments">Comments:</label>
+                                <textarea id="comments"></textarea>
+                            </div>
+                        
+                            <div>
+                                <button onclick="submitOrder()">Submit Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-us">
+            <div class="content">
+                <h1>Contact Us</h1>
+                <div class="contact">
+                    <div class="contact-block contact-details">
+                        <h2><i class="fa fa-map-pin"></i> Location</h2>
+                        <span> 1200 W Algonquin Rd, Palatine, IL 60067</span>
+                        <h2><i class="fa fa-phone"></i> Contact Details</h2>
+                        <ul>
+                            <li><i class="fa fa-envelope-square"></i><a href="mailto:savoryslicepizzeria@gmail.com">
+                                    savoryslicepizzeria@gmail.com</a></li>
+                            <li><i class="fa fa-phone-square"></i><a href="tel:(847)925-6000"> (847) 925-6000</a></li>
+                        </ul>
+                        <h2><i class="fa fa-envelope-square"></i> Subscribe</h2>
+                        <form id="form">
+                            <input type="email" id="email" name="email"
+                                placeholder="Enter your email for special offers!" required />
+                            <input id="submit" type="submit" value="Subscribe" />
+                        </form>
+                    </div>
+                    <div class="contact-block map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.226211049547!2d-88.07527078865867!3d42.08120257110017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fa5ea9833a843%3A0xeb56837f813674f!2sHarper%20College!5e0!3m2!1sen!2sus!4v1699491936214!5m2!1sen!2sus"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <p><a href="#home">Savory Slice Pizzeria Copyright &copy; 2023</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+        integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+</body>
+
+</html>  
