@@ -218,13 +218,18 @@ section {
     padding: 20px 20px 40px 20px;
 }
 
-.card-desc h4 {
+.card-desc h3, h4 {
     margin: 0;
     margin-bottom: 10px;
     font-family: "Fredoka", sans-serif;
-    color: #A37043;
+    color: #F7B32B;
     font-size: 30px;
     text-shadow: 0px 1px 1px #000;
+}
+
+.card-desc p {
+    font-family: "Fredoka", sans-serif;
+    color: #000;
 }
 
 .services p {
@@ -234,17 +239,8 @@ section {
     font-weight: bold;
     border-radius: 25px;
     background: #8C001A;
-    margin: 30px;
+    margin-bottom: 80px;
     padding: 10px;
-}
-
-.services h4 {
-    margin: 0;
-    margin-bottom: 10px;
-    font-family: "Fredoka", sans-serif;
-    color: #A37043;
-    font-size: 30px;
-    text-shadow: 0px 1px 1px #000;
 }
 
 .section-h1 {
@@ -458,4 +454,20 @@ footer a {
     box-shadow: 0 0 10px rgba(249, 192, 78, 1);
     background: rgba(247, 179, 43, 1);
     background: radial-gradient(circle, rgba(247, 179, 43, 1) 40%, rgba(88, 88, 167, 0) 100%);
+}
+
+#name {
+    border: thin solid #8C001A;
+}
+
+#address {
+    border: thin solid #8C001A;
+}
+
+#phone {
+    border: thin solid #8C001A;
+}
+
+.services label {
+    font-family: "Fredoka", sans-serif;
 }

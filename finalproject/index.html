@@ -16,8 +16,8 @@
 <body class="page">
     <header class="header">
         <div class="brand">
-            <a href="#home" class="logo"><img src="2tb.png"/></a>
-            <a href="#home" class="logo-name"><img src="3tb.png"/></a>
+            <a href="#home" class="logo"><img src="2tb.png" /></a>
+            <a href="#home" class="logo-name"><img src="3tb.png" /></a>
         </div>
         <div class="topnav">
             <a href="#home">Home</a>
@@ -70,24 +70,20 @@
                         <img src="pepperonipizza.png" alt="Pepperoni Pizza" />
                         <div class="card-desc">
                             <h4>Contact Info</h4>
-                            Please enter your contact information below:
+                            <p>Please enter your contact information below:</p>
                         </div>
                         <div class="services">
-                            <div class="services">
-                                <div>
-                                    <label for="name">Name:</label>
-                                    <input type="text" id="name" required>
-                                </div>
-
-                                <div>
-                                    <label for="address">Address:</label>
-                                    <textarea id="address" required></textarea>
-                                </div>
-
-                                <div>
-                                    <label for="phone">Phone Number:</label>
-                                    <input type="tel" id="phone" required>
-                                </div>
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div>
+                                <label for="address">Address:</label>
+                                <textarea id="address" required></textarea>
+                            </div>
+                            <div>
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" required>
                             </div>
                         </div>
                     </div>
@@ -95,7 +91,7 @@
                         <img src="cheesepizza.png" alt="Cheese Pizza" />
                         <div class="card-desc">
                             <h4>Pizza Details</h4>
-                            Please choose your pizza size and toppings.
+                            <p>Please choose your pizza size and toppings.</p>
                         </div>
                         <div class="services">
                             <label for="pizzaSize">Pizza Size:</label>
@@ -104,10 +100,21 @@
                                 <option value="medium">Medium</option>
                                 <option value="large">Large</option>
                             </select>
-
-                            <h3>Toppings:</h3>
+                            <h4>Toppings:</h4>
                             <input type="checkbox" id="pepperoni" class="topping" value="Pepperoni">
                             <label for="pepperoni">Pepperoni</label>
+                            <input type="checkbox" id="sausage" class="topping" value="Sausage">
+                            <label for="sausage">Sausage</label>
+                            <input type="checkbox" id="bacon" class="topping" value="Bacon">
+                            <label for="bacon">Bacon</label>
+                            <input type="checkbox" id="mushroom" class="topping" value="Mushroom">
+                            <label for="mushroom">Mushroom</label>
+                            <input type="checkbox" id="blackolive" class="topping" value="Black Olive">
+                            <label for="blackolive">Black Olive</label>
+                            <input type="checkbox" id="onion" class="topping" value="Onion">
+                            <label for="onion">Onion</label>
+                            <input type="checkbox" id="bellpepper" class="topping" value="Bell Pepper">
+                            <label for="bellpepper">Bell Pepper</label>
                             <div>
                                 <button onclick="addPizza()">Add Pizza</button>
                             </div>
@@ -117,19 +124,19 @@
                         <img src="supremepizza.png" alt="Supreme Pizza" />
                         <div class="card-desc">
                             <h4>Order Summary</h4>
-                            Please review your pizza order.
+                            <p>Please review your pizza order.</p>
                         </div>
                         <div class="services">
                             <div id="orderSummary">
                                 <ul id="orderList"></ul>
                                 <p>Total: $<span id="totalPrice">0.00</span></p>
                             </div>
-                        
+
                             <div>
                                 <label for="comments">Comments:</label>
                                 <textarea id="comments"></textarea>
                             </div>
-                        
+
                             <div>
                                 <button onclick="submitOrder()">Submit Order</button>
                             </div>
@@ -185,4 +192,4 @@
         </script>
 </body>
 
-</html>  
+</html>
