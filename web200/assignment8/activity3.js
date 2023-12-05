@@ -17,4 +17,4 @@ function avgScore(array) {
    return avgScore = totalScore / numOfScores;
 }
 
-document.getElementById("array").innerHTML = "Your average score is: " + avgScore(array);
+document.getElementById("arrays").innerHTML = "Your average score is: " + avgScore(array);
