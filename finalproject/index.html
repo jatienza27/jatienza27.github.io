@@ -74,16 +74,10 @@
                         </div>
                         <div class="services">
                             <div>
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" required>
-                            </div>
-                            <div>
-                                <label for="address">Address:</label>
-                                <textarea id="address" required></textarea>
-                            </div>
-                            <div>
-                                <label for="phone">Phone Number:</label>
-                                <input type="tel" id="phone" required>
+                                <div>
+                                    <label for="name">Full Name:</label>
+                                    <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,29 +88,38 @@
                             <p>Please choose your pizza size and toppings.</p>
                         </div>
                         <div class="services">
-                            <label for="pizzaSize">Pizza Size:</label>
-                            <select id="pizzaSize">
-                                <option value="small">Small</option>
-                                <option value="medium">Medium</option>
-                                <option value="large">Large</option>
-                            </select>
-                            <h4>Toppings:</h4>
-                            <input type="checkbox" id="pepperoni" class="topping" value="Pepperoni">
-                            <label for="pepperoni">Pepperoni</label>
-                            <input type="checkbox" id="sausage" class="topping" value="Sausage">
-                            <label for="sausage">Sausage</label>
-                            <input type="checkbox" id="bacon" class="topping" value="Bacon">
-                            <label for="bacon">Bacon</label>
-                            <input type="checkbox" id="mushroom" class="topping" value="Mushroom">
-                            <label for="mushroom">Mushroom</label>
-                            <input type="checkbox" id="blackolive" class="topping" value="Black Olive">
-                            <label for="blackolive">Black Olive</label>
-                            <input type="checkbox" id="onion" class="topping" value="Onion">
-                            <label for="onion">Onion</label>
-                            <input type="checkbox" id="bellpepper" class="topping" value="Bell Pepper">
-                            <label for="bellpepper">Bell Pepper</label>
                             <div>
-                                <button onclick="addPizza()">Add Pizza</button>
+                                <h3>Size</h3>
+                                <div>
+                                    <input type="radio" name="crust-size" value="small" id="small" checked />
+                                    <label for="small"><span>Small</span><span>$ 5.00</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="crust-size" value="medium" id="medium" />
+                                    <label for="medium">
+                                        <span>Medium</span><span>$ 7.50</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Toppings</h3>
+                                <div id="toppings">
+                                    <div>
+                                        <input type="checkbox" id="0" name="toppings" value="Extra Cheese" />
+                                        <label for="0">
+                                            <span>Extra cheese</span>
+                                            <span>$ 1.30</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="1" name="toppings" value="Pepperoni" />
+                                        <label for="1">
+                                            <span>Pepperoni</span>
+                                            <span>$ 1.30</span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -127,23 +130,45 @@
                             <p>Please review your pizza order.</p>
                         </div>
                         <div class="services">
-                            <div id="orderSummary">
-                                <ul id="orderList"></ul>
-                                <p>Total: $<span id="totalPrice">0.00</span></p>
-                            </div>
-
                             <div>
-                                <label for="comments">Comments:</label>
-                                <textarea id="comments"></textarea>
-                            </div>
+                                <div>
+                                    <h2>Price <span id="price">$-.--</span></h2>
 
-                            <div>
-                                <button onclick="submitOrder()">Submit Order</button>
+                                </div>
+                                <div class="tax">
+                                    <h3>Tax <span id="tax">$-.--</span></h3>
+
+                                </div>
+                                <div class="total">
+                                    <h3>Total <span id="total">$--.--</span></h3>
+
+                                </div>
+                                <button type="submit" value="Submit" id="add-pizza" aria-label="Submit">Add
+                                    Pizza</button>
                             </div>
+                            <div id="errors"></div>
+                        </div>
+                        <div class="col">
+                            <h4>Order</h4>
+                            <div id="orders-list">
+                            </div>
+                            <button id="confirm">Confirm Order</button>
+                        </div>
+                        <div class="col">
+                            <h4>Order object</h4>
+                            <pre id="ord-object">
+
+                            {
+                    
+                            }
+                  
+                            </pre>
                         </div>
                     </div>
+
                 </div>
             </div>
+
         </section>
         <section id="contact-us">
             <div class="content">
