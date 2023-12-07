@@ -1,20 +1,31 @@
-const numOfScores = Number(prompt("How many scores would you like to enter?"));
-
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-
-function avgScore(array) {
-   var score = 0;
-   var totalScore = 0;
-   var i = 0;
-
-   score = Number(prompt("Please enter you score:"));
-
-   array.forEach(function (score) {
-      totalScore += score;
+function avgScore() {
+   let score = 0;
+   let totalScore = 0;
+   let i = 0;
+   let array = [];
+   let avgScore = 0;
+   
+   const numOfScores = Number(prompt("How many scores would you like to enter?"));
+  
+   while (i < numOfScores) {
+      score = Number(prompt("Please enter you score:"));
+      array.push(score);
       i++;
-   });
+   }
 
-   return avgScore = totalScore / numOfScores;
+
+  for (j = 0; j < array.length; j++){
+   totalScore +=[j];
+  }
+
+  avgScore = totalScore / numOfScores;
+
+  avgScore = Math.round(avgScore * 100) / 100
+
+  return avgScore;
 }
 
-document.getElementById("array").innerHTML = "Your average score is: " + avgScore;
+document.getElementById("arrays").innerHTML = "Your average score is: " + avgScore();
+
+
+//Calculated average still does not come out correctly for some reason.

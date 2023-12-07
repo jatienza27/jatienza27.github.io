@@ -65,108 +65,111 @@
                         Let the cravings commence!
                     </p>
                 </div>
-                <div class="packages-cards">
-                    <div class="card">
-                        <img src="pepperonipizza.png" alt="Pepperoni Pizza" />
-                        <div class="card-desc">
-                            <h4>Contact Info</h4>
-                            <p>Please enter your contact information below:</p>
-                        </div>
-                        <div class="services">
-                            <div>
-                                <div>
-                                    <label for="name">Full Name:</label>
-                                    <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
-                                </div>
+                <form name="form" id="form">
+                    <div class="packages-cards">
+                        <div class="card">
+                            <img src="pepperonipizza.png" alt="Pepperoni Pizza" />
+                            <div class="card-desc">
+                                <h4>Contact Info</h4>
+                                <p>Please enter your contact information below:</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="cheesepizza.png" alt="Cheese Pizza" />
-                        <div class="card-desc">
-                            <h4>Pizza Details</h4>
-                            <p>Please choose your pizza size and toppings.</p>
-                        </div>
-                        <div class="services">
-                            <div>
-                                <h3>Size</h3>
+                            <div class="services">
                                 <div>
-                                    <input type="radio" name="crust-size" value="small" id="small" checked />
-                                    <label for="small"><span>Small</span><span>$ 5.00</span>
-                                    </label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="crust-size" value="medium" id="medium" />
-                                    <label for="medium">
-                                        <span>Medium</span><span>$ 7.50</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div>
-                                <h3>Toppings</h3>
-                                <div id="toppings">
                                     <div>
-                                        <input type="checkbox" id="0" name="toppings" value="Extra Cheese" />
-                                        <label for="0">
-                                            <span>Extra cheese</span>
-                                            <span>$ 1.30</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" id="1" name="toppings" value="Pepperoni" />
-                                        <label for="1">
-                                            <span>Pepperoni</span>
-                                            <span>$ 1.30</span>
-                                        </label>
+                                        <label for="name">Full Name:</label>
+                                        <input type="text" name="fullname" id="fullname" placeholder="Full Name"
+                                            required />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="supremepizza.png" alt="Supreme Pizza" />
-                        <div class="card-desc">
-                            <h4>Order Summary</h4>
-                            <p>Please review your pizza order.</p>
-                        </div>
-                        <div class="services">
-                            <div>
+                        <div class="card">
+                            <img src="cheesepizza.png" alt="Cheese Pizza" />
+                            <div class="card-desc">
+                                <h4>Pizza Details</h4>
+                                <p>Please choose your pizza size and toppings.</p>
+                            </div>
+                            <div class="services">
                                 <div>
-                                    <h2>Price <span id="price">$-.--</span></h2>
-
+                                    <h3>Size</h3>
+                                    <div>
+                                        <input type="radio" name="crust-size" value="small" id="small" checked />
+                                        <label for="small"><span>Small</span><span>$ 5.00</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="crust-size" value="medium" id="medium" />
+                                        <label for="medium">
+                                            <span>Medium</span><span>$ 7.50</span>
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="tax">
-                                    <h3>Tax <span id="tax">$-.--</span></h3>
-
+                                <div>
+                                    <h3>Toppings</h3>
+                                    <div id="toppings">
+                                        <div>
+                                            <input type="checkbox" id="0" name="toppings" value="Extra Cheese" />
+                                            <label for="0">
+                                                <span>Extra cheese</span>
+                                                <span>$ 1.30</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="1" name="toppings" value="Pepperoni" />
+                                            <label for="1">
+                                                <span>Pepperoni</span>
+                                                <span>$ 1.30</span>
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="total">
-                                    <h3>Total <span id="total">$--.--</span></h3>
-
-                                </div>
-                                <button type="submit" value="Submit" id="add-pizza" aria-label="Submit">Add
-                                    Pizza</button>
                             </div>
-                            <div id="errors"></div>
                         </div>
-                        <div class="col">
-                            <h4>Order</h4>
-                            <div id="orders-list">
+                        <div class="card">
+                            <img src="supremepizza.png" alt="Supreme Pizza" />
+                            <div class="card-desc">
+                                <h4>Order Summary</h4>
+                                <p>Please review your pizza order.</p>
                             </div>
-                            <button id="confirm">Confirm Order</button>
-                        </div>
-                        <div class="col">
-                            <h4>Order object</h4>
-                            <pre id="ord-object">
+                            <div class="services">
+                                <div>
+                                    <div>
+                                        <h2>Price <span id="price">$-.--</span></h2>
+
+                                    </div>
+                                    <div class="tax">
+                                        <h3>Tax <span id="tax">$-.--</span></h3>
+
+                                    </div>
+                                    <div class="total">
+                                        <h3>Total <span id="total">$--.--</span></h3>
+
+                                    </div>
+                                    <button type="submit" value="Submit" id="add-pizza" aria-label="Submit">Add
+                                        Pizza</button>
+                                </div>
+                                <div id="errors"></div>
+                            </div>
+                            <div class="col">
+                                <h4>Order</h4>
+                                <div id="orders-list">
+                                </div>
+                                <button id="confirm">Confirm Order</button>
+                            </div>
+                            <div class="col">
+                                <h4>Order object</h4>
+                                <pre id="ord-object">
 
                             {
                     
                             }
                   
                             </pre>
+                            </div>
                         </div>
-                    </div>
 
-                </div>
+                    </div>
+                </form>
             </div>
 
         </section>
@@ -184,7 +187,7 @@
                             <li><i class="fa fa-phone-square"></i><a href="tel:(847)925-6000"> (847) 925-6000</a></li>
                         </ul>
                         <h2><i class="fa fa-envelope-square"></i> Subscribe</h2>
-                        <form id="form">
+                        <form id="subscribe">
                             <input type="email" id="email" name="email"
                                 placeholder="Enter your email for special offers!" required />
                             <input id="submit" type="submit" value="Subscribe" />
