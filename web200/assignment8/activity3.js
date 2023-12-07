@@ -25,7 +25,6 @@ function avgScore() {
   return avgScore;
 }
 
-document.getElementById("arrays").innerHTML = "Your average score is: " + avgScore();
-
+document.getElementById("array").innerHTML = "Your average score is: " + avgScore;
 
 //Calculated average still does not come out correctly for some reason.
