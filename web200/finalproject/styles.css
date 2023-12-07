@@ -232,6 +232,15 @@ section {
     color: #000;
 }
 
+.services h3, h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: #F7B32B;
+    font-size: 30px;
+    text-shadow: 0px 1px 1px #000;
+}
+
 .services p {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;

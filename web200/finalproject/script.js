@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < crustSizeList.length; i++) {
             crustSizeList[i].addEventListener("click", function () {
                 crustSize = this.value;
-                const { price, tax, total } = calculatePrice( selectedToppings,crustSize);
+                const { price, tax, total } = calculatePrice(selectedToppings, crustSize);
                 updateDisplayedPrice(price, tax, total);
             });
         }
@@ -45,43 +45,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     addToppingsEventListeners();
     function addToppingsEventListeners() {
-        // find all toppings checkboxes
         const toppingOptionsElements = document.querySelectorAll("input[name=toppings]");
-        // loop through all topping checkboxes
+    
         for (let i = 0; i < toppingOptionsElements.length; i++) {
-            // add an event listener for each topping item (i.e. for each checkbox)
-            // each time a topping checkbox is checked, it triggers this behavior
-            toppingOptionsElements[i].addEventListener("click", function () {
-                // if checked.. add to toppings selected toppings array
+            toppingOptionsElements[i].addEventListener("change", function () {
                 if (this.checked) {
-                    // if checkbox is checked, it will add value to array of toppings.
                     selectedToppings.push(this.value);
-                    // log the array to verify info...
-                    console.log(selectedToppings);
-                    // fancy trick. 
-                    // set the price, tax and total variables to the returned values from that function. 
-                    const {price, tax, total } = calculatePrice(selectedToppings, crustSize);
-
-                    // update the price displayed on screen.
-                    updateDisplayedPrice(price, tax, total);
+                } else {
+                    const index = selectedToppings.indexOf(this.value);
+                    if (index !== -1) {
+                        selectedToppings.splice(index, 1);
+                    }
                 }
+                const { price, tax, total } = calculatePrice(selectedToppings, crustSize);
+                updateDisplayedPrice(price, tax, total);
             });
         }
     }
-
+    
 
     // function to calculate the price of your pizza
     // pass in parameters toppings and size
     function calculatePrice(selectedToppings, size) {
         let price = 0;
         // calculate price starting with toppings.
-        price += selectedToppings.length * 1.30;
+        price += selectedToppings.length * 1.50;
         // update price based on size of pizza
         if (size === "small") {
-            price += 5;
+            price += 5.5;
         }
         if (size === "medium") {
             price += 7.5;
+        }
+        if (size === "large") {
+            price += 9.5
         }
         // calculate taxes
         const tax = price * 0.1; // multiply by 10%
@@ -160,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 if (key === "crust-size") {
                     size = value;
-                } 
+                }
             }
         });
 
@@ -171,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (checkedToppings.length > 0) {
                 const total = calculatePrice(checkedToppings, size);
                 console.log("toppings: " + checkedToppings);
-                
+
                 addPizza(size, checkedToppings, total.total);
                 displayOrders();
                 init();
@@ -187,8 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function confirmOrder() {
         // order confirmation body of customer info and pizza info
         const body = {
-          customer: customerData,
-          pizzas: pizzaOrders,
+            customer: customerData,
+            pizzas: pizzaOrders,
         };
         console.log("body: ");
         console.log(body);
@@ -202,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // ordObjDiv.innerHTML = JSON.stringify(JSON.parse(xhr.response), null, 2);
             ordObjDiv.innerHTML = xhr.response;
         };
-      }
+    }
 
     addPizzaBtn.addEventListener("click", submitAddPizzaForm);
     confirmBtn.addEventListener("click", confirmOrder);
