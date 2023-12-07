@@ -1,4 +1,4 @@
-var bibliography = [];
+let bibliography = [];
 
 function create() {
     let authorLN = document.getElementById('lastName').value;
@@ -11,9 +11,9 @@ function create() {
     let publisher = document.getElementById('publisher').value;
 
     let book = {
-        authorLN: lastName,
-        authorFN: firstName,
-        authorMN: middleName,
+        authorLN: authorLN,
+        authorFN: authorFN,
+        authorMN: authorMN,
         year: year,
         title: title,
         location: {
@@ -22,9 +22,10 @@ function create() {
         },
         publisher: publisher,
     };
-    
+
     bibliography.push(book);
-   
+
+    document.getElementById('output').innerHTML = createAPAFormat(bibliography);
 }
 
 function createAPAFormat(bibliography) {
