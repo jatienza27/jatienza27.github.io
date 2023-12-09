@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
         this.toppings = toppings;
         this.price = price;
     }
-
+    
+    //I fixed issue where if topping unchecked price did not change. Will now susbtract price when topping is unchecked.
     addToppingsEventListeners();
     function addToppingsEventListeners() {
         const toppingOptionsElements = document.querySelectorAll("input[name=toppings]");
