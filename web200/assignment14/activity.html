@@ -35,7 +35,7 @@
 
     <h1>Fill Out the Form</h1>
 
-    <form class="infoInput" onsubmit="return validateForm()">
+    <form id="infoInput" onsubmit="return validateForm()">
         <label for="firstName">First Name:</label>
         <input type="text" id="firstName" placeholder="First Name" required minlength="2" maxlength="30">
 
@@ -71,23 +71,6 @@
         <button type="button" id="submit" disabled>Submit</button>
     </form>
 
-    <script>
-        function validateForm() {
-            let form = document.getElementById('infoInput');
-            let valid = form.checkValidity();
-
-            if (valid) {
-                alert('Form submitted successfully!');
-            }
-
-            return valid;
-        }
-
-        document.getElementById('infoInput').addEventListener('input', function () {
-            let valid = this.checkValidity();
-            document.getElementById('submit').disabled = !valid;
-        });
-    </script>
 </body>
 
 </html>
