@@ -66,13 +66,13 @@ body {
     transform: rotateY(360deg);
 }
 
-.topnav {
+nav {
     font-family: "Fredoka", sans-serif;
     display: flex;
     justify-content: center;
 }
 
-.topnav a {
+nav a {
     float: left;
     display: block;
     color: #F6F5F1;
@@ -82,11 +82,11 @@ body {
     font-size: 20px;
 }
 
-.topnav a:hover {
+nav a:hover {
     color: #F7B32B;
 }
 
-.main {
+main {
     width: 100%;
     margin: auto;
 }
@@ -105,7 +105,7 @@ section {
     padding: 10px;
 }
 
-.main h1 {
+main h1 {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -134,7 +134,7 @@ section {
     position: absolute;
     height: 80%;
     width: 100%;
-    background: #F6F5F1 url("backgroundpizza.png");
+    background: #F6F5F1 url("../finalproject/images/backgroundpizza.png");
     background-size: cover;
     background-position: 50% 50%;
     background-attachment: fixed;
@@ -263,7 +263,7 @@ section {
 #contact-us {
     display: block;
     width: 100%;
-    background: #000 url("contactbackground.png");
+    background: #000 url("../finalproject/images/contactbackground.png");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
