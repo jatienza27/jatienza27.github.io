@@ -42,12 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
         this.toppings = toppings;
         this.price = price;
     }
-    
+
     //I fixed issue where if topping unchecked price did not change. Will now susbtract price when topping is unchecked.
     addToppingsEventListeners();
     function addToppingsEventListeners() {
         const toppingOptionsElements = document.querySelectorAll("input[name=toppings]");
-    
+
         for (let i = 0; i < toppingOptionsElements.length; i++) {
             toppingOptionsElements[i].addEventListener("change", function () {
                 if (this.checked) {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
-    
+
 
     // function to calculate the price of your pizza
     // pass in parameters toppings and size
@@ -146,12 +146,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+
     function submitAddPizzaForm(e) {
-        e.preventDefault(); // prevents form from being submitted causing a page refresh
-        let formData = new FormData(form);
+        e.preventDefault();
+
+        const formData = new FormData(document.forms.form);
+        formData.forEach((value, key) => {
+            customerData[key] = value;
+        });
+        const comments = document.getElementById("comments").value;
         let checkedToppings = [];
         let size;
-        // loop through all form input fields
+
         formData.forEach(function (value, key) {
             if (key === "toppings") {
                 checkedToppings.push(value);
@@ -162,15 +168,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // if there's customer data from the form...
-        // console.log(checkedToppings.length);
         if (customerData) {
             errorsDiv.innerHTML = "";
             if (checkedToppings.length > 0) {
                 const total = calculatePrice(checkedToppings, size);
                 console.log("toppings: " + checkedToppings);
-
-                addPizza(size, checkedToppings, total.total);
+                addPizza(size, checkedToppings, total.total, comments);
                 displayOrders();
                 init();
             } else {
@@ -181,10 +184,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function addPizza(size, toppings, total, comments) {
+        let pizza = new Pizza(size, toppings, total, customerData, comments);
+        pizzaOrders.push(pizza);
+        console.log(pizza);
+    }
+
+    function Pizza(size, toppings, price, customerInfo, comments) {
+        this.size = size;
+        this.toppings = toppings;
+        this.price = price;
+        this.customerInfo = customerInfo;
+        this.comments = comments;
+    }
 
     function confirmOrder(e) {
         // order confirmation body of customer info and pizza info
-        e.preventDefault(); 
+        e.preventDefault();
         const body = {
             customer: customerData,
             pizzas: pizzaOrders,
@@ -205,4 +221,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     addPizzaBtn.addEventListener("click", submitAddPizzaForm);
     confirmBtn.addEventListener("click", confirmOrder);
+
 });
