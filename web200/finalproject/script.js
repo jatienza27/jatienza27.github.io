@@ -42,12 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
         this.toppings = toppings;
         this.price = price;
     }
-
+    
     //I fixed issue where if topping unchecked price did not change. Will now susbtract price when topping is unchecked.
     addToppingsEventListeners();
     function addToppingsEventListeners() {
         const toppingOptionsElements = document.querySelectorAll("input[name=toppings]");
-
+    
         for (let i = 0; i < toppingOptionsElements.length; i++) {
             toppingOptionsElements[i].addEventListener("change", function () {
                 if (this.checked) {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
-
+    
 
     // function to calculate the price of your pizza
     // pass in parameters toppings and size
@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ordersList.innerHTML = orders;
     }
 
+
     function submitAddPizzaForm(e) {
         e.preventDefault(); // prevents form from being submitted causing a page refresh
         let formData = new FormData(form);
@@ -180,9 +181,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+
     function confirmOrder(e) {
         // order confirmation body of customer info and pizza info
-        e.preventDefault();
+        e.preventDefault(); 
         const body = {
             customer: customerData,
             pizzas: pizzaOrders,
@@ -203,5 +205,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     addPizzaBtn.addEventListener("click", submitAddPizzaForm);
     confirmBtn.addEventListener("click", confirmOrder);
-
 });
