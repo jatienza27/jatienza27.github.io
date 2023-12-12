@@ -145,19 +145,12 @@ document.addEventListener("DOMContentLoaded", function () {
         ordersList.innerHTML = orders;
     }
 
-
-
     function submitAddPizzaForm(e) {
-        e.preventDefault();
-
-        const formData = new FormData(document.forms.form);
-        formData.forEach((value, key) => {
-            customerData[key] = value;
-        });
-        const comments = document.getElementById("comments").value;
+        e.preventDefault(); // prevents form from being submitted causing a page refresh
+        let formData = new FormData(form);
         let checkedToppings = [];
         let size;
-
+        // loop through all form input fields
         formData.forEach(function (value, key) {
             if (key === "toppings") {
                 checkedToppings.push(value);
@@ -168,12 +161,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        // if there's customer data from the form...
+        // console.log(checkedToppings.length);
         if (customerData) {
             errorsDiv.innerHTML = "";
             if (checkedToppings.length > 0) {
                 const total = calculatePrice(checkedToppings, size);
                 console.log("toppings: " + checkedToppings);
-                addPizza(size, checkedToppings, total.total, comments);
+
+                addPizza(size, checkedToppings, total.total);
                 displayOrders();
                 init();
             } else {
@@ -182,20 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             errorsDiv.innerHTML = errors;
         }
-    }
-
-    function addPizza(size, toppings, total, comments) {
-        let pizza = new Pizza(size, toppings, total, customerData, comments);
-        pizzaOrders.push(pizza);
-        console.log(pizza);
-    }
-
-    function Pizza(size, toppings, price, customerInfo, comments) {
-        this.size = size;
-        this.toppings = toppings;
-        this.price = price;
-        this.customerInfo = customerInfo;
-        this.comments = comments;
     }
 
     function confirmOrder(e) {
