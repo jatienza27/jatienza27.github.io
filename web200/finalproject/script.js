@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("form");
     const errorsDiv = document.getElementById("errors");
     const ordObjDiv = document.getElementById("ord-object");
+    const firstName = document.getElementById("fname");
+    const lastName = document.getElementById("lname");
+    const email = document.getElementById("contactemail");
+    const phone = document.getElementById("phone");
+    const comments = document.getElementById("comments");
 
 
     init(); // start the script when page loads by calling this function
@@ -185,6 +190,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function confirmOrder(e) {
         // order confirmation body of customer info and pizza info
         e.preventDefault(); 
+        customerData.first = firstName.value;
+        customerData.last = lastName.value;
+        customerData.email = email.value;
+        customerData.phone = phone.value;
+        customerData.comments = comments.value;
+      
         const body = {
             customer: customerData,
             pizzas: pizzaOrders,
