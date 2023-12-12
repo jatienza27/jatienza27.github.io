@@ -182,9 +182,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    function confirmOrder(e) {
+    function confirmOrder() {
         // order confirmation body of customer info and pizza info
-        e.preventDefault(); 
         const body = {
             customer: customerData,
             pizzas: pizzaOrders,
