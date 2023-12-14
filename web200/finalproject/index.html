@@ -75,7 +75,7 @@
                                 <p>Please enter your contact information below:</p>
                             </div>
                             <div class="services">
-                                <div>
+                                <div class="customer-info">
                                     <div>
                                         <label for="name">First Name*:</label>
                                         <input type="text" id="fname" name="fname" required>
@@ -90,7 +90,7 @@
                                     </div>
                                     <div>
                                         <label for="phone">Phone*:</label>
-                                        <input type="tel" name="phone" id="phone" required>
+                                        <input type="tel" name="phone" id="phone-info" required>
                                     </div>
                                     <div>
                                         <input type="checkbox" name="text-alerts" id="text-alerts" value="no" checked>
@@ -108,29 +108,31 @@
                                 <p>Please choose your pizza size and toppings.</p>
                             </div>
                             <div class="services">
-                                <div>
+                                <div class="pizza-size">
                                     <h4>Size</h4>
-                                    <div>
-                                        <input type="radio" name="crust-size" value="small" id="small" checked />
-                                        <label for="small"><span>Small</span><span>$5.50</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input type="radio" name="crust-size" value="medium" id="medium" />
-                                        <label for="medium">
-                                            <span>Medium</span><span>$7.50</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input type="radio" name="crust-size" value="large" id="large" />
-                                        <label for="large">
-                                            <span>Large</span><span>$9.50</span>
-                                        </label>
+                                    <div class="sizes">
+                                        <div>
+                                            <input type="radio" name="crust-size" value="small" id="small" checked />
+                                            <label for="small"><span>Small</span><span>$5.50</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="crust-size" value="medium" id="medium" />
+                                            <label for="medium">
+                                                <span>Medium</span><span>$7.50</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="crust-size" value="large" id="large" />
+                                            <label for="large">
+                                                <span>Large</span><span>$9.50</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div>
+                                <div id="toppings">
                                     <h3>Toppings</h3>
-                                    <div id="toppings">
+                                    <div class="meats">
                                         <h4>Meats</h4>
                                         <div>
                                             <input type="checkbox" id="1" name="toppings" value="Pepperoni" />
@@ -153,6 +155,8 @@
                                                 <span>$1.50</span>
                                             </label>
                                         </div>
+                                    </div>
+                                    <div class="nonmeats">
                                         <h4>Non-Meats</h4>
                                         <div>
                                             <input type="checkbox" id="4" name="toppings" value="Mushrooms" />
@@ -182,21 +186,20 @@
                                                 <span>$1.50</span>
                                             </label>
                                         </div>
-                                        <form name="comment" id="comment">
-                                            <div>
-                                                <label for="comments">Comments:</label>
-                                                <textarea name="comments" id="comments"
-                                                    placeholder="Any special notes or delivery instructions">
-                                                </textarea>
-                                            </div>
-
-                                            <button type="submit" value="Submit" id="add-pizza" aria-label="Submit">
-                                                Add Pizza
-                                            </button>
-                                        </form>
-
                                     </div>
+                                    <form name="comment" id="comment">
+                                        <label for="comments">
+                                            <h4>Comments:</h4>
+                                        </label>
+                                        <textarea name="comments" id="comment-area"
+                                            placeholder="Any special notes or delivery instructions"></textarea>
+                                        <button type="submit" value="Submit" id="add-pizza" aria-label="Submit">
+                                            Add Pizza
+                                        </button>
+                                    </form>
+
                                 </div>
+
                             </div>
                         </div>
                         <div class="card">
@@ -206,7 +209,7 @@
                                 <p>Please review your pizza order.</p>
                             </div>
                             <div class="services">
-                                <div>
+                                <div class="cost-info">
                                     <div>
                                         <h3>Price</h3>
                                         <span id="price">$-.--</span>
@@ -232,11 +235,7 @@
                                 <h4>Order object</h4>
                                 <pre id="ord-object">
 
-                            {
-                    
-                            }
-                  
-                            </pre>
+                                </pre>
                             </div>
                         </div>
 

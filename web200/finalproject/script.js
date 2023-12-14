@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstName = document.getElementById("fname");
     const lastName = document.getElementById("lname");
     const email = document.getElementById("contactemail");
-    const phone = document.getElementById("phone");
-    const comments = document.getElementById("comments");
+    const phoneNum = document.getElementById("phone-info");
+    const comments = document.getElementById("comment-area");
 
 
     init(); // start the script when page loads by calling this function
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
         customerData.first = firstName.value;
         customerData.last = lastName.value;
         customerData.email = email.value;
-        customerData.phone = phone.value;
+        customerData.phone = phoneNum.value;
         customerData.comments = comments.value;
       
         const body = {

@@ -215,10 +215,10 @@ main h1 {
 }
 
 .card-desc {
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 0px 20px;
 }
 
-.card-desc h3, h4 {
+.card-desc h4 {
     margin: 0;
     margin-bottom: 10px;
     font-family: "Fredoka", sans-serif;
@@ -232,7 +232,8 @@ main h1 {
     color: #000;
 }
 
-.services h3, h4 {
+.services h3,
+h4 {
     margin: 0;
     margin-bottom: 10px;
     font-family: "Fredoka", sans-serif;
@@ -248,7 +249,6 @@ main h1 {
     font-weight: bold;
     border-radius: 25px;
     background: #8C001A;
-    margin-bottom: 80px;
     padding: 10px;
 }
 
@@ -258,6 +258,205 @@ main h1 {
     padding: 20px;
     text-align: center;
     color: #F6F5F1;
+}
+
+.customer-info {
+    text-align: left;
+    margin: 20px;
+}
+
+.pizza-size {
+    text-align: left;
+    margin: 20px;
+}
+
+.cost-info {
+    margin: 20px;
+}
+
+#toppings {
+    text-align: left;
+    margin: 20px;
+}
+
+#toppings h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: #F7B32B;
+    font-size: 30px;
+    text-shadow: 0px 1px 1px #000;
+    text-align: center;
+}
+
+#toppings h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: #69140E;
+    font-size: 20px;
+    text-shadow: 0px 1px 1px #000;
+    text-align: center;
+
+}
+
+.pizza-size h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: #F7B32B;
+    font-size: 30px;
+    text-shadow: 0px 1px 1px #000;
+    text-align: center;
+
+}
+
+#comment {
+    text-align: center;
+    margin: 20px;
+}
+
+#comment h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: #F7B32B;
+    font-size: 30px;
+    text-shadow: 0px 1px 1px #000;
+    text-align: center;
+}
+
+#add-pizza {
+    text-align: center;
+    margin-left: 130px;
+}
+
+#add-pizza {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    border: none;
+    background-color: #F7B32B;
+    color: #F6F5F1;
+    padding: 5px 10px;
+    border: thin solid #8C001A;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px #222;
+}
+
+#add-pizza:hover {
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    background-color: #8C001A;
+    color: #F6F5F1;
+    padding: 5px 10px;
+    border: thin solid #F7B32B;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px #222;
+}
+
+#confirm {
+    text-align: center;
+    margin-left: 10px;
+}
+
+#confirm {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    border: none;
+    background-color: #F7B32B;
+    color: #F6F5F1;
+    padding: 5px 10px;
+    border: thin solid #8C001A;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px #222;
+}
+
+#confirm:hover {
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    background-color: #8C001A;
+    color: #F6F5F1;
+    padding: 5px 10px;
+    border: thin solid #F7B32B;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px #222;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #8C001A;
+
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #8C001A;
+}
+
+input[type=tel] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #8C001A;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 2px solid #8C001A;
+    text-align: left;
+}
+
+#price {
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    color: #000;
+    text-shadow: 0px 1px 1px #8C001A;
+    text-align: left;
+    margin: 10px 0 50px 0;
+}
+
+#tax {
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    color: #000;
+    text-shadow: 0px 1px 1px #8C001A;
+    text-align: left;
+    margin: 10px 0 50px 0;
+}
+
+#total {
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    color: #000;
+    text-shadow: 0px 1px 1px #8C001A;
+    text-align: left;
+    margin: 10px 0 50px 0;
+}
+
+#orders-list {
+    font-family: "Fredoka", sans-serif;
+    font-size: 15px;
+    color: #000;
+    text-shadow: 0px 1px 1px #8C001A;
+    text-align: left;
+    margin: 10px 0 50px 0;    
+    list-style-type: none;
+}
+
+#ord-object {
+    font-family: "Fredoka", sans-serif;
+    font-size: 15px;
+    color: #000;
+    text-shadow: 0px 1px 1px #8C001A;
+    text-align: center;
+    margin: 10px 0 50px 0;
 }
 
 #contact-us {
@@ -321,6 +520,7 @@ main h1 {
     display: block;
     margin-left: 30px;
     margin-bottom: 30px;
+    text-align: left;
 }
 
 .contact ul {
@@ -479,4 +679,136 @@ footer a {
 
 .services label {
     font-family: "Fredoka", sans-serif;
+    font-size: 15px;
+    color: #000;
+    text-shadow: 0px 1px 1px #8C001A;
+}
+
+.meats {
+    margin: 10px 0 20px 10px;
+}
+
+.nonmeats {
+    margin: 10px 0 20px 10px;
+}
+
+.sizes {
+    margin: 10px 0 20px 10px;
+}
+
+@media (max-width: 680px) {
+    .header {
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        top: 0px;
+        width: 100%;
+        height: 20%;
+    }
+
+    main {
+        margin-top: 85px;
+    }
+
+    #home .content h1 {
+        font-size: 35px;
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        height: 80%;
+        width: 100%;
+        background: #F6F5F1 url(../finalproject/images/backgroundpizza.png);
+        background-size: cover;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+        z-index: -1;
+        -webkit-filter: brightness(40%);
+        filter: brightness(50%);
+    }
+
+    .content {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .packages-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .packages-cards .card {
+        width: 80%;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-block {
+        width: 100%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    input {
+        font-family: "Montserrat", sans-serif;
+        margin: 5px;
+        padding: 5px 10px;
+        border: 0px;
+        font-size: 1.1em;
+    }
+
+    #email {
+        width: 280px;
+        border-radius: 3px;
+        border: thin solid #A37043;
+    }
+
+    .contact-block h2 {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .contact-details {
+        font-size: 15px;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        margin: 0 25px 0 25px;
+    }
+
+    .video_wrapper {
+        position: relative;
+        padding-bottom: 10%;
+        width: 120%;
+        height: 120%;
+        margin-left: 35%;
+    }
+
+    .fa-pizza-slice {
+        display: inline-block;
+        margin-bottom: -175px;
+        font-size: 5.5em;
+        border-radius: 50%;
+        padding: 10px 10px 20px 10px;
+        box-shadow: 0 0 10px rgba(249, 192, 78, 1);
+        background: rgba(247, 179, 43, 1);
+        background: radial-gradient(circle, rgba(247, 179, 43, 1) 40%, rgba(88, 88, 167, 0) 100%);
+    }
 }
